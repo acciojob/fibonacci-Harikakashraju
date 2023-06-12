@@ -1,6 +1,7 @@
+const num = 9;
 function fibonacci(num) {
 // your code here
-	 if (num <= 0)
+	 if (num <= 1)
         return num;
     return fibonacci(num-1) + fibonacci(num-2);
 }
