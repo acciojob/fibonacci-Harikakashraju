@@ -22,8 +22,8 @@ function fibonacci(num) {
 
 // Example usage:
 // const num = prompt("Enter a number between 0 and 50:");
-const result = fibonacci(parseInt(num));
-console.log(result);
+// const result = fibonacci((num));
+// console.log(result);
 
 
 module.exports = fibonacci;
