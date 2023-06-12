@@ -14,6 +14,7 @@ function fibonacci(num) {
         }
         return f[num];
 }
+let num= 9;
  console.log(fibonacci(num));
 
 module.exports = fibonacci;
