@@ -4,6 +4,6 @@ function fibonacci(num) {
         return num;
     return fibonacci(num-1) + fibonacci(num-2);
 }
-//console.log(fibonacci(num));
+console.log(fibonacci(num));
 
 module.exports = fibonacci;
