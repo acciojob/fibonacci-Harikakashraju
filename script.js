@@ -1,20 +1,29 @@
 // const num = 9;
 function fibonacci(num) {
-// your code here
-	  let f = new Array(num+2); // 1 extra to handle case, n = 0
-        let i;
-        /* 0th and 1st number of the series are 0 and 1*/
-        f[0] = 0;
-        f[1] = 1;
-        for (i = 2; i <= num; i++)
-        {
-            /* Add the previous 2 numbers in the series
-            and store it */
-            f[i] = f[i-1] + f[i-2];
-        }
-        return f[num];
+  if (num === 0) {
+    return 0;
+  } else if (num === 1 || num === 2) {
+    return 1;
+  } else if (num < 0 || num > 50) {
+    return "Invalid input. The number must be between 0 and 50.";
+  }
+
+  let fibPrev = 1;
+  let fibCurrent = 1;
+
+  for (let i = 3; i <= num; i++) {
+    let fibNext = fibPrev + fibCurrent;
+    fibPrev = fibCurrent;
+    fibCurrent = fibNext;
+  }
+
+  return fibCurrent;
 }
-let num= 9;
- console.log(fibonacci(num));
+
+// Example usage:
+// const num = prompt("Enter a number between 0 and 50:");
+const result = fibonacci(parseInt(num));
+console.log(result);
+
 
 module.exports = fibonacci;
